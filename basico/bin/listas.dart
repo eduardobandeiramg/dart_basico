@@ -45,11 +45,17 @@ class Listas {
     print(nomesCompridos);
     print(ultimoDeles);
 
-
   }
 
   void metodoMap(){ // percorre a lista e produz uma nova lista fazendo modificações nela 
-    print(usuarios.map((usuario) => "Este é o $usuario e "));
+    print(usuarios.map((usuario) => "Este é o $usuario e ").toList());
+    // A função map retorna um Iterable. É necessário chamar o toList() ao final para transformar em lista.
+  }
+
+  void operadorDeEspalhamento(){//Pega os itens de uma lista individualmente
+    var lista1 = [1, 2, 3];
+    var lista2 = [4, 5, 6];
+    var listasJuntas = [0, ...lista1, ...lista2];
   }
 
   }
